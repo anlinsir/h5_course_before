@@ -1,0 +1,160 @@
+.statistics-part{
+    background: url('~@/assets/images/statistics_topbackground.png') no-repeat;
+    background-size: 100%;
+    background-position: left top;
+    background-position-y: 84px;
+    width: 100%;
+    height: 100%;
+    &-tips-section{
+        width:750px;
+        height:84px;
+        line-height: 84px;
+        color: #FF9E0A;
+        background:rgba(255,245,225,1);
+        font-size:28px;
+        font-weight:bold;
+        text-align: center;
+    }
+    &-course-title{
+        color: #333333;
+        font-weight:bold;
+        text-align: center;
+        font-size:32px;
+        margin:34px 0 20px;
+    }
+    &-course-info{
+        font-size:24px;
+        color: #666666;
+        display: flex;
+        margin-bottom: 18px;
+        justify-content: center;
+        span.span{
+            margin-right: 60px;
+        }
+    }
+    &-course-score{
+        width:289px;
+        height:289px;
+        background:rgba(255,174,0,1);
+        margin-bottom: 60px;
+    }
+    &-course-analysis{
+        min-height:200px;
+        background:rgba(255,255,255,1);
+        border-radius:24px 24px 0px 0px;
+        padding-top: 56px;
+        &-title{
+            font-size:34px;
+            font-weight:800;
+            color: #303133;
+            position: relative;
+            text-align: center;
+            &::after,&::before{
+                content: '';
+                position: absolute;
+                width:24px;
+                height:24px;
+                background:rgba(251,222,123,1);
+                border-radius:50%;
+                z-index: 1;
+            }
+            &::after{
+                bottom: -8px;
+                left: 292px;
+            }
+            &::before{
+                right: 292px;
+                top: -8px;
+            }
+            >span{
+                position: relative;
+                z-index: 2;
+                display: inline-block;
+            }
+        }
+        &-chart{
+            width: 100%;
+            height: 300px;
+            border:1px solid red;
+            margin-top: 30px;
+            margin-bottom: 48px;
+        }
+        &-module-box{
+            padding:0  22px;
+        }
+        &-module{
+            height:484px;
+            background:rgba(255,255,255,1);
+            box-shadow:0px 6px 32px rgba(255,198,0,0.18);
+            text-align: center;
+            margin-bottom: 80px;
+            &-title{
+                display: inline-block;
+                width:214px;
+                height:64px;
+                background:rgba(255,198,0,1);
+                border-radius:48px;
+                font-size:32px;
+                font-weight:bold;
+                color: #333333;
+                text-align: center;
+                line-height: 64px;
+                transform: translateY(-32px);
+            }
+            &-content{
+                text-align: left;
+                font-size:28px;
+                line-height:52px;
+                padding: 0 34px;
+            }
+        }
+        &-answer-box{
+            padding: 0 54px 64px;
+            &-title{
+                font-size:32px;
+                font-weight:bold;
+                margin-bottom: 34px;
+                color: #333333;
+            }
+            &-content{
+                display: flex;
+                flex-wrap: wrap;
+                &-item{
+                    width:64px;
+                    height:64px;
+                    border:1px solid ;
+                    line-height: 64px;
+                    text-align: center;
+                    font-weight:bold;
+                    margin-right: 25px;
+                    margin-bottom: 32px;
+                    color: #FFC600;
+                    border-radius: 50%;
+                    &:nth-child(7n){
+                        margin-right: 0;
+                    }
+                }
+            }
+            &-btn-section{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                &-btn{
+                    width:280px;
+                    height:84px;
+                    border:2px solid rgba(255,198,0,1);
+                    font-size:32px;
+                    text-align: center;
+                    line-height: 84px;
+                    border-radius:48px;
+                    color: #FFC600;
+                }
+                .right{
+                    background:linear-gradient(90deg,rgba(255,198,0,1) 0%,rgba(255,174,0,1) 100%);
+                    box-shadow:0px 4px 20px rgba(255,199,0,0.6);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.diag-info{
+    padding: 60px 22px 0;
+    &-user-info{
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: start;
+        margin-bottom: 40px;
+        >img{
+            width: 96px;
+            height: 96px;
+            margin-right: 20px;
+        }
+        >.name{
+            font-size:32px;
+            color: #333333;
+            margin-right: 12px;
+        }
+        .grade{
+            width:100px;
+            height:32px;
+            background:rgba(249,217,106,1);
+            border-radius:44px;
+            line-height: 32px;
+            font-size:20px;
+            color: #694324;
+            text-align: center;
+        }
+    }
+    &-title{
+        font-size:36px;
+        color: #333;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 34px;
+    }
+    &-notice{
+        width:100%;
+        min-height:556px;
+        background:rgba(247,247,247,1);
+        padding: 40px 48px 0;
+        box-sizing: border-box;
+        margin-bottom: 64px;
+    }
+    &-btn-part{
+        padding: 0 54px;
+        font-size:38px;
+    }
+    &-error{
+        text-align: center;
+        >img{
+            margin-top: 30px;
+            width: 418.93px;
+            margin-bottom: 40px;
+            height: 245.07px;
+        }
+    }
+    &-pay-course{
+        padding: 0 32px;
+        margin-top: 256px;
+    }
+}
+
+ 

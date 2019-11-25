@@ -1,0 +1,95 @@
+.login-form{
+    border-bottom: 1px solid rgba(217,217,217,1);;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    
+    &-label{
+        font-size:26px;
+        color: #666666;
+        margin-bottom: 32px;
+    }
+    &-input{
+        height: 50px;
+        width: 100%;
+        position: relative;
+        >input{
+            height: 50px;
+            width: 100%;
+            padding: 0;
+            border: none;
+            font-size:36px;
+            &::placeholder{
+                color: #ccc;
+            }
+            &:focus{
+                
+            }
+        }
+        &-after{
+             display: flex;
+             justify-content: baseline;
+            >span{
+                color: #778087;
+                font-size:36px;
+                margin-right: 20px;
+                line-height: 50px;
+                 
+            }
+        }
+        &-before{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        &-get-code{
+            width:184px;
+            height:58px;
+            background:#F3F5F9;
+            border-radius:32px;
+            font-size:24px;
+            color: #666;
+            text-align: center;
+            line-height: 58px;
+        }
+        &-code-img{
+            width: 184px;
+            height: 58px;
+        }
+        &-refresh{
+            width: 30px;
+            height: 30px;
+            transform: translateY(-12px);
+            margin-right: 8px;
+        }
+    }
+    &-has-tips{
+        margin-bottom: 16px;
+    }
+    &-tips{
+        font-size:24px;
+        color: #999999;
+        margin-bottom: 26px;
+    }
+}
+.login-page{
+    padding: 110px 38px 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.login-page-warp{
+    width: 100%;
+    height: 100%;
+    background: url('~@/assets/images/login-bg.png') no-repeat;
+    background-size: 100%;
+    background-position: left bottom;
+}
+.login-head-tilte{
+    font-weight:bold;
+    margin-bottom: 100px;
+    color: #333;
+    font-size:60px;
+}
+.login-btn{
+    margin-top: 126px;
+}
