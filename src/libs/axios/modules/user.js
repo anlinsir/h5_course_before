@@ -7,18 +7,21 @@ export function getCampusOptions (params) {
     params
   })
 }
-export function getCampusList (params) {
-  return fetch({
-    url: '/api/area/campus/campusLists',
-    method: 'get',
-    params
+
+/* 用户登录 */
+export function Login (data) {
+  return fetch.post({
+    url: '/api/student/loginBySmsCode',
+    method: 'post',
+    data
   })
 }
 
-export function getCampusDetail (params) {
-  return fetch({
-    url: '/api/area/campus/campusDetail',
-    method: 'get',
-    params
+/* 获取验证码 */
+export function sendSmsCode (data) {
+  return fetch.post({
+    url: '/api/student/sendSmsCode',
+    method: 'post',
+    data
   })
 }

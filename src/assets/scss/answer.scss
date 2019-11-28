@@ -31,6 +31,7 @@
             margin-bottom: 36px;
             align-items: center;
             padding: 0 40px 0 28px;
+            position: relative;
             >.time{
                 font-size:28px;
                 font-weight:bold;
@@ -59,9 +60,13 @@
                     height: 32px;
                 }
             }
+            
         }
         &-content{
             padding: 0 30px;
+            display: flex;
+            height: 80%;
+            flex-direction: column;
             box-sizing: border-box;
             &-topic{
                 font-size:32px;
@@ -120,4 +125,101 @@
             }
         }
    }
+}
+
+.complex-content{
+    width:100%;
+    padding: 24px;
+    box-sizing: border-box;
+    min-height:300px;
+    background:rgba(247,247,247,1);
+    opacity:1;
+    border-radius:8px;
+    color: #333333;
+    font-size: 30px;
+    line-height:48px;
+    overflow: auto;
+    flex: 1;
+    
+}
+.complex{
+    height: 40%;
+    transition: all .5s;
+    overflow: auto;
+    >.drag{
+        height: 60px;
+        width: 100%;
+        text-align: center;
+        .drag-section{
+            width:188px;
+            display: inline-block;
+            height:32px;
+            background:rgba(251,222,123,1);
+            border-radius:0px 0px 16px 16px;
+        }
+    }
+    >.complex-item{
+
+    }
+}
+
+.answer-sheet,.answer-sheet-all{
+    width:100%;
+    position: absolute;
+    top:84px;
+    left: 0;
+    height:352px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    padding-top: 48px;
+    background:rgba(255,255,255,1);
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    &-item{
+        width:64px;
+        margin-right: 22px;
+        font-size:28px;
+        font-weight:bold;
+        color: #FFC600;
+        text-align: center;
+        line-height: 64px;
+        height:64px;
+        border:2px solid rgba(255,198,0,1);
+        border-radius: 50%;
+        &:nth-child(7n){
+            margin-right: 0px;
+        }
+    }
+    >.no-anwser{
+        border:2px solid rgba(204,204,204,1);
+        color: #999999;
+    }
+    >.active{
+        background:rgba(255,198,0,1);
+        border-color: transparent;
+        color: #fff;
+    }
+}
+.answer-sheet-all{
+    height:  calc(100% - 84px);
+    position: absolute;
+    top: 84px;
+    padding: 0 28px;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 16px;
+    border:1px solid red;
+    &-section{
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+    }
+    &-section{
+        &-title{
+            font-size:32px;
+            color: #333333;
+            font-weight:bold;
+        }
+    }
 }

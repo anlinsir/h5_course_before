@@ -48,6 +48,8 @@ table {
 }
 input{
     outline: none;
+    /* 取消ios内阴影 */
+    -webkit-appearance: none;
 }
 .base-btn{
     background:linear-gradient(90deg,rgba(255,198,0,1) 0%,rgba(255,174,0,1) 100%);

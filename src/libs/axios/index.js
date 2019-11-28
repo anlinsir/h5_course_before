@@ -1,7 +1,7 @@
 import axios from 'axios'
 import store from '@/store'
 import { INTERFACE_URL, TIMEOUT, APP_NAME, APP_VERSION } from '@/config/common'
-
+import { Toast } from 'vant'
 /* 解析配置中默认参数 */
 const DEFAULT = {
   baseUrl: INTERFACE_URL,
@@ -16,31 +16,21 @@ export default new class Fetch {
   /**
    * @description get请求封装
    * */
-  get (url, params, options = {}) {
-    return this._fetch({
-      url,
-      method: 'get',
-      params,
-      options
-    })
+  get (options = {}) {
+    return this._fetch({ ...options })
   }
   /**
    * @description post请求封装
    * */
-  post (url, data, options = {}) {
-    return this._fetch({
-      url,
-      method: 'post',
-      data,
-      options
-    })
+  post (options = {}) {
+    return this._fetch({ ...options })
   }
   /**
    * @description 请求体
    * @param {object} options 请求额外参数
    * */
   _fetch (options) {
-    const opt = Object.assign({}, DEFAULT, options.options)
+    const opt = Object.assign({}, DEFAULT, options)
     /* 创建axios实例 */
     const instance = axios.create({
       /* 默认请求根目录 */
@@ -50,7 +40,7 @@ export default new class Fetch {
       /* 设置header */
       headers: {
         Authorization: store.getters.getToken || '',
-        'APP-NAME': opt.name,
+        'APP-NAME': 'tiku',
         'APP-VERSION': opt.version
       }
     })
@@ -73,6 +63,10 @@ export default new class Fetch {
           store.dispatch('logout')
           return Promise.reject(data)
         default:
+          Toast({
+            message: data.message,
+            duration: 2000
+          })
           return Promise.reject(data)
       }
     }

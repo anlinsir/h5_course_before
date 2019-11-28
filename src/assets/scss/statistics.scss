@@ -33,10 +33,36 @@
         }
     }
     &-course-score{
-        width:289px;
+        text-align: center;
         height:289px;
-        background:rgba(255,174,0,1);
         margin-bottom: 60px;
+        position: relative;
+        >.circle{
+            width:289px;
+            display: inline-block;
+        }
+        >.circle-text{
+            position: absolute;
+            left: 50%;
+            top:50%;
+            height:289px;
+            transform: translateY(-50%) translateX(-50%);
+            .defern{
+                margin-top: 48px;
+                color: #F64500;
+                font-size:24px;
+            }
+            .score-num{
+                margin:24px 0;
+                font-size:80px;
+                color: #F64500;
+                font-weight:bold;
+            }
+            .score-full{
+                color: #FFAE00;
+                font-size:24px;
+            }
+        }
     }
     &-course-analysis{
         min-height:200px;

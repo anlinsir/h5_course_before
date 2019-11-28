@@ -6,7 +6,22 @@
             <span class="span">提交时间  2019.11.16 12:00</span>
             <span>答题用时  45:00</span>
         </div>
-        <div class="statistics-part-course-score"></div>
+        <div class="statistics-part-course-score">
+            <div class="circle">
+                <van-circle
+                    v-model="currentRate"
+                    :rate="currentRate"
+                    :speed="50"
+                     size="2.89rem"
+                    :color="'#FF9E0A'"
+                 />
+            </div>
+            <div class="circle circle-text">
+                <div class="defern">得分</div>
+                <div class="score-num">90</div>
+                <div class="score-full">满分100分</div>
+            </div>
+        </div>
 
         <div class="statistics-part-course-analysis">
             <div class="statistics-part-course-analysis-title">
@@ -71,3 +86,18 @@
 
     </div>
 </template>
+
+<script>
+import { Circle } from 'vant'
+export default {
+  components: {
+    'van-circle': Circle
+  },
+  data () {
+    return ({
+      currentRate: 90
+
+    })
+  }
+}
+</script>

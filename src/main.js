@@ -7,8 +7,8 @@ import '@/assets/js/rem.js'
 /* 引入样式文件 */
 import '_scss/index.scss'
 import 'vant/lib/index.css'
-import { Toast } from 'vant'
-
+import { Toast, Overlay } from 'vant'
+Vue.use(Overlay)
 Vue.use(Toast)
 Vue.config.productionTip = false
 
